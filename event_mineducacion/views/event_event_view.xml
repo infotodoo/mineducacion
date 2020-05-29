@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record id="event_event_form_min" model="ir.ui.view">
+            <field name="name">event.event.form.min</field>
+            <field name="model">event.event</field>
+            <field name="inherit_id" ref="event.view_event_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_tz']" position="after">
+                    <field name="analytic_id" required="True" />
+                    <field name="requisition_id" required="True" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
